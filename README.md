@@ -12,9 +12,7 @@ By accommodating varying variances among features, our proposed method leads to 
 In particular, unlike numerous prior studies that assume the distribution of heterogeneous variances follows a right-skewed inverse gamma distribution, our proposed method demonstrates excellent performance even when the distribution of heterogeneous variances takes on left-skewed, symmetric, or right-skewed forms.
 We conducted a series of rigorous experiments to empirically validate the effectiveness of our approach. The results of these experiments demonstrate that our proposed methodology excels in accurately classifying high-dimensional data characterized by heterogeneous variances.
 
-<br> 
 
-##
 The repository provides R code for implementing MVA, along with simulation examples.
 
 
