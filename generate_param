@@ -1,0 +1,55 @@
+# 1.  generate_param()
+generate_param = function(p,base_sigma_2,prop,delta, sparse=TRUE){
+  
+  mu1 = c(rep(1,100),rep(0,p-100)) ; mu2 = rep(0,p)
+  sigma_2 = c(rep(base_sigma_2,p*prop), rep(delta,p*(1-prop)))
+  
+  if(sparse==FALSE){
+    tmp_mu1 = rnorm((p-100),0,0.1)
+    mu1 = c(rep(1,100),tmp_mu1)
+  }
+  
+  return(list(mu1=mu1,mu2=mu2,sigma_2=sigma_2))
+}
+
+# 1.1 generate_param_unif()
+generate_param_unif = function(p, maximum, sparse=TRUE){
+  
+  sigma_2 = runif(p, min=1, max=maximum)
+  mu1 = c(rep(1,100),rep(0,p-100)) ; mu2 = rep(0,p)
+  
+  if(sparse==FALSE){
+    tmp_mu1 = rnorm((p-100),0,0.1)
+    mu1 = c(rep(1,100),tmp_mu1)
+  }
+  
+  return(list(mu1=mu1,mu2=mu2,sigma_2=sigma_2))
+}
+
+# 1.2 generate_param_beta()
+generate_param_beta = function(p, beta, sparse=TRUE){
+  
+  sigma_2 = 5 * rbeta(p, 5, beta)
+  mu1 = c(rep(1,100),rep(0,p-100)) ; mu2 = rep(0,p)
+  
+  if(sparse==FALSE){
+    tmp_mu1 = rnorm((p-100),0,0.1)
+    mu1 = c(rep(1,100),tmp_mu1)
+  }
+  
+  return(list(mu1=mu1,mu2=mu2,sigma_2=sigma_2))
+}
+
+# 1.3 generate_param_invg()
+generate_param_invg = function(p, alpha, sparse=TRUE){
+  
+  sigma_2 = rinvgamma(p, alpha,10)
+  mu1 = c(rep(1,100),rep(0,p-100)) ; mu2 = rep(0,p)
+  
+  if(sparse==FALSE){
+    tmp_mu1 = rnorm((p-100),0,0.1)
+    mu1 = c(rep(1,100),tmp_mu1)
+  }
+  
+  return(list(mu1=mu1,mu2=mu2,sigma_2=sigma_2))
+}
