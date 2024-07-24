@@ -6,7 +6,7 @@
 ## base_sigma_2 : the baseline for variances
 ## prop : the proportion of variances with base_sigma_2 value
 ## delta : the remaining value apart from base_sigma_2
-## sparse : boolean variable indicating whether the mean variances structure is sparse; default is TRUE.
+## sparse : boolean variable indicating whether the mean differences structure is sparse; default is TRUE.
 ##
 ## Output Variable : A list
 ## mu1 : the mean parameters of group 1 
