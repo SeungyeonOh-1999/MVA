@@ -13,6 +13,7 @@ In particular, unlike numerous prior studies that assume the distribution of het
 We conducted a series of rigorous experiments to empirically validate the effectiveness of our approach. The results of these experiments demonstrate that our proposed methodology excels in accurately classifying high-dimensional data characterized by heterogeneous variances.
 
 
+
 The repository provides R code for implementing MVA, along with simulation examples.
 
 
