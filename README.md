@@ -1,10 +1,9 @@
 # MVA
- [Nonparametric Mean and Variance Adaptive Classification Rule for High-Dimensional Data with Heteroscedastic Variances](https://doi.org/10.1002/sam.11689)
 
 Oh, S. and Park, H. (2024). Nonparametric mean and variance adaptive
 classification rule for high-dimensional data with heteroscedastic variances.
 <em>Statistical Analysis and Data Mining: The ASA Data Science Journal</em>,
-17(3):e11689
+17(3):e11689, <a href="https://doi.org/10.1002/sam.11689">🔗Link</a>
 <br> 
 
 ## Abstract 
