@@ -6,9 +6,9 @@
 ## train_n2 : the number of data of Group2 in the training dataset
 ##
 ## Output Variable : A list
-## Xj : mean differences between Group1 and Group2 for each feature
+## Xj : sample mean differences between Group1 and Group2 for each feature
 ## Vj : pooled sample variances for each feature
-## spmean_tr_sum : mean sums between Group1 and Group2 for each feature
+## spmean_tr_sum : sample mean sums between Group1 and Group2 for each feature
 
 get_Xj_Vj = function(data,train_n1, train_n2){
   
