@@ -1,7 +1,7 @@
 ## 4. get_Loglik_mat1()
 ##
 ## Input Variable
-## x_jv_j : a list containing sample mean differences, pooled sample variances, and mean sums
+## x_jv_j : a list containing sample mean differences, pooled sample variances, and sample mean sums
 ## ngrid_var : the number of grid points for variance parameters 
 ##
 ## Output Variable : A list
