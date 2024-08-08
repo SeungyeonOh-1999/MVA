@@ -1,15 +1,14 @@
 ## 3. get_Xj_Vj()
-## This function calculates sample mean differences, pooled sample variances and sums of sample means for each feature.
 ##
-## Input variable
-## data : A list of group1 and group2 data matrix
-## train_n1 : the number of training data of group1 
-## train_n2 : the number of training data of group2
-## 
-## Output variable : A list 
-## Xj : the sample mean differences
-## Vj : the pooled sample variances 
-## spmean_tr_sum : sums of sample means
+## Input Variable
+## data : a list containing Group1 and Group2
+## train_n1 : the number of data of Group1 in the training dataset
+## train_n2 : the number of data of Group2 in the training dataset
+##
+## Output Variable : A list
+## Xj : mean differences between Group1 and Group2 for each feature
+## Vj : pooled sample variances for each feature
+## spmean_tr_sum : mean sums between Group1 and Group2 for each feature
 
 get_Xj_Vj = function(data,train_n1, train_n2){
   
