@@ -5,7 +5,7 @@
 ## ngrid_var : the number of grid points for variance parameters 
 ##
 ## Output Variable : A list
-## v_k :g= grid points for variance parameters
+## v_k : grid points for variance parameters
 ## Loglik_mat :A p-by-(ngrid_var) matrix containing the density of pooled sample variances for a specific value v_k;
 
 get_Loglik_mat1 = function(x_jv_j, ngrid_var){
