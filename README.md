@@ -15,7 +15,7 @@ We conducted a series of rigorous experiments to empirically validate the effect
 <br>
 
 The repository provides R code for implementing MVA, along with simulation examples.
-If you happen to notice any errors in my code, I would greatly appreciate it if you could kindly let me know by reaching out to me at this email address. 
+If you happen to notice any errors in my code, I would greatly appreciate it if you could kindly let me know by reaching out to me at the email address provided below. 
 
 thisissyoh@gmail.com
 
