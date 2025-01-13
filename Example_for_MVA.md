@@ -1,4 +1,4 @@
-Example for MVA
+An example for MVA
 ================
 Seungyeon Oh
 
