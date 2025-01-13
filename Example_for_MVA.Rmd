@@ -1,0 +1,54 @@
+---
+title: "MVA_Example"
+author: "Seungyeon Oh"
+date: "2025-01-13"
+output: html_document
+---
+
+# Example for MVA 
+```{r}
+rm(list=ls())
+library(mixsqp)
+library(caret)
+source("~/MVA_code_for_export/MVA.R")
+```
+<br> <br> 
+```{r}
+# set the parameters
+p=10000
+Train_n1=25 ; Train_n2=25
+Test_n1=100 ; Test_n2=100
+Beta = 3.5
+```
+<br> <br> 
+```{r}
+# Generate the data set 
+set.seed(1)
+Param = generate_param_beta(p,Beta)
+Data = generate_data(Param, Train_n1,Train_n2,Test_n1,Test_n2)
+```
+<br> <br> 
+```{r}
+# MVA 
+X_jV_j = get_Xj_Vj(Data,Train_n1, Train_n2)
+Est = get_est(p, X_jV_j, ngrid_var = 300, ngrid = 300, Train_n1, Train_n2)
+Eval = evaluation(Data, X_jV_j, Est, test_group = c(rep(1,Test_n1),rep(2,Test_n2)))
+cat("\n");cat("Misclassification Rate of MVA :",Eval)
+```
+<br><br>
+```{r}
+# compare the estimated parameters with true parameters
+par(mfrow = c(1, 2))
+true_mean_diff = Param$mu1 - Param$mu2
+true_sigma_2 = Param$sigma_2
+plot(true_mean_diff, Est$mu, main = "Mean difference", xlab="True mean differences", ylab = "Estimated mean differneces by MVA")
+abline(0,1,col="skyblue")
+text(0.7,0.5, "y=x",col="skyblue")
+
+plot(true_sigma_2, Est$sigma_2, main = "Mean difference", xlab="True variances", ylab = "Estimated variances by MVA")
+abline(0,1,col="skyblue")
+text(3.5,3, "y=x",col="skyblue")
+```
+
+
+
