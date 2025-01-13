@@ -2,7 +2,7 @@
 title: "MVA_Example"
 author: "Seungyeon Oh"
 date: "2025-01-13"
-output: html_document
+output: github_document
 ---
 
 # Example for MVA 
