@@ -130,19 +130,3 @@ cat("\n");cat("Misclassification Rate of MVA :",Eval)
     ## Misclassification Rate of MVA : 0.145
 
 <br><br>
-
-``` r
-# compare the estimated parameters with true parameters
-par(mfrow = c(1, 2))
-true_mean_diff = Param$mu1 - Param$mu2
-true_sigma_2 = Param$sigma_2
-plot(true_mean_diff, Est$mu, main = "Mean difference", xlab="True mean differences", ylab = "Estimated mean differneces by MVA")
-abline(0,1,col="skyblue")
-text(0.7,0.5, "y=x",col="skyblue")
-
-plot(true_sigma_2, Est$sigma_2, main = "Mean difference", xlab="True variances", ylab = "Estimated variances by MVA")
-abline(0,1,col="skyblue")
-text(3.5,3, "y=x",col="skyblue")
-```
-
-![](comparison.png )<!-- -->
