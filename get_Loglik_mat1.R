@@ -1,20 +1,20 @@
 ## 4. get_Loglik_mat1()
 ##
 ## Input Variable
-## x_jv_j : a list containing sample mean differences, pooled sample variances, and sample mean sums
+## xj_vj : a list containing sample mean differences, pooled sample variances, and sample mean sums
 ## ngrid_var : the number of grid points for variance parameters 
 ##
 ## Output Variable : A list
 ## v_k : grid points for variance parameters
 ## Loglik_mat :A p-by-(ngrid_var) matrix containing the density of pooled sample variances for a specific value v_k;
 
-get_Loglik_mat1 = function(x_jv_j, ngrid_var,train_n1, train_n2){
+get_Loglik_mat1 = function(xj_vj, ngrid_var,train_n1, train_n2){
   
-  min_Vj = min(x_jv_j$Vj)
-  max_Vj = max(x_jv_j$Vj)
+  min_Vj = min(xj_vj$Vj)
+  max_Vj = max(xj_vj$Vj)
   v_k = exp(seq(log(min_Vj),log(max_Vj),length=ngrid_var)) 
   
-  vj = x_jv_j$Vj
+  vj = xj_vj$Vj
   M2 = train_n1 + train_n2 - 2
   
   Loglik_mat = matrix(0, ncol=ngrid_var, nrow=P)
