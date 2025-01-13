@@ -8,13 +8,14 @@
 ## v_k : grid points for variance parameters
 ## Loglik_mat :A p-by-(ngrid_var) matrix containing the density of pooled sample variances for a specific value v_k;
 
-get_Loglik_mat1 = function(x_jv_j, ngrid_var){
+get_Loglik_mat1 = function(x_jv_j, ngrid_var,train_n1, train_n2){
   
   min_Vj = min(x_jv_j$Vj)
   max_Vj = max(x_jv_j$Vj)
   v_k = exp(seq(log(min_Vj),log(max_Vj),length=ngrid_var)) 
   
   vj = x_jv_j$Vj
+  M2 = train_n1 + train_n2 - 2
   
   Loglik_mat = matrix(0, ncol=ngrid_var, nrow=P)
   
